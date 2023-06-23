@@ -1,0 +1,5 @@
+.env
+.venv
+Chap3_02_YoutubeSummarizer/transcript.txt
+Chap3_03_QuestionAnsweringOnPDF/eldenringwalkthrough.pdf
+*/__pycache__/**

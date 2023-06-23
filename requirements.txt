@@ -1,0 +1,12 @@
+openai
+python-dotenv
+
+# For Chap3_03_QuestionAnsweringOnPDF
+redis
+pypdf 
+numpy
+
+# For Chap3_04_VoiceAssistant
+gradio
+ffmpeg-python
+openai-whisper

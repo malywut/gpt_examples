@@ -9,7 +9,7 @@ Install the requirements for all the examples with:
 
     pip install -r requirements.txt
 
-Each example can be run with:
+Each example contains either a jupyter notebook, or a python file that can be run with:
 
     python [example_folder]/run.py
 
@@ -21,4 +21,4 @@ Start Redis with
     docker-compose up
 
 ### Chap3_04_VoiceAssistant
-The gradio interface is available at the address displayed in the output
+The gradio interface is available at the address displayed in the output.

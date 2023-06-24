@@ -6,7 +6,7 @@ from responseservice import ResponseService
 from dataservice import DataService
 
 # Example pdf
-pdf = 'Chap3_03_QuestionAnsweringOnPDF/eldenringwalkthrough.pdf'
+pdf = '../files/ExplorersGuide.pdf'
 
 data_service = DataService()
 

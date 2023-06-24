@@ -9,4 +9,13 @@ numpy
 # For Chap3_04_VoiceAssistant
 gradio
 ffmpeg-python
-openai-whisper
+#openai-whisper
+
+# For Chapt5_01_LangChain
+langchain
+bs4
+wikipedia
+
+# For Chapt5_02_LangChainPDF
+tiktoken
+faiss-cpu

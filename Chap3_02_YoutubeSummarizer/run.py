@@ -4,7 +4,7 @@ load_dotenv()
 import openai
 
 # Read the transcript from the file
-with open("Chap3_02_YoutubeSummarizer/transcript.txt", "r") as f:
+with open("../files/transcript.txt", "r") as f:
     transcript = f.read()
 
 # Call the openai ChatCompletion endpoint, with the ChatGPT model

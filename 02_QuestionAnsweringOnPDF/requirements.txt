@@ -1,0 +1,6 @@
+openai
+redis
+wget
+pandas
+fire
+pypdf 

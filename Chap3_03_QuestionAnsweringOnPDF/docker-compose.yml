@@ -10,7 +10,6 @@ services:
       - REDISEARCH_ARGS=CONCURRENT_WRITE_MODE
     volumes:
       - vector-db:/var/lib/redis
-      - ./redis.conf:/usr/local/etc/redis/redis.conf
     healthcheck:
       test: ["CMD", "redis-cli", "-h", "localhost", "-p", "6379", "ping"]
       interval: 2s

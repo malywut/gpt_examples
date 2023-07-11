@@ -93,7 +93,7 @@ class DataService():
                      vector_field: str = "vector",
                      return_fields: list = ["text", "vector_score"],
                      hybrid_fields="*",
-                     k: int = 20,
+                     k: int = 5,
                      print_results: bool = False,
                      ):
         # Creates embedding vector from user query

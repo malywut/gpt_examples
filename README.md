@@ -1,4 +1,4 @@
-This repository contains different examples and usecases showcased in The book [Developing Apps with GPT-4 and ChatGPT](https://learning.oreilly.com/library/view/developing-apps-with/9781098152475/).
+This repository contains different examples and usecases showcased in The book [Developing Apps with GPT-4 and ChatGPT](https://appswithgpt.com/).
 ![Book cover](./images/cover.png).
 
 

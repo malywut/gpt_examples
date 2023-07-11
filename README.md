@@ -1,6 +1,7 @@
-This repository contains different examples and usecases showcased in The book [Developing Apps with GPT-4 and ChatGPT](https://appswithgpt.com/).
-![Book cover](./images/cover.png).
-
+<p align="center">
+This repository contains different examples and usecases showcased in the book <a href="https://appswithgpt.com">Developing Apps with GPT-4 and ChatGPT</a>.
+<img src="./images/book_cover.png" alt="Book cover" width="300"/>
+</p>
 
 # Usage
 

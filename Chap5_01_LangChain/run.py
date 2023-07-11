@@ -29,8 +29,8 @@ agent = initialize_agent(
     verbose=True
 )
 
-question = """What is the square root of the age of the 5th president of the 
-United States when he died?"""
+question = """What is the square root of the population of the capital of the
+country where the Olympic Games were held in 2016 ?"""
 agent.run(question)
 
 

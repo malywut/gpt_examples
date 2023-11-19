@@ -3,7 +3,9 @@ import whisper
 from dotenv import load_dotenv
 
 load_dotenv()
-import openai
+from openai import OpenAI
+
+client = OpenAI()
 model = whisper.load_model("base")
 
 
@@ -26,10 +28,8 @@ messages = [{"role": "user", "content": prompts['START']}]
 
 
 def generate_answer(messages):
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=messages
-    )
+    response = client.chat.completions.create(model="gpt-3.5-turbo",
+    messages=messages)
     return (response['choices'][0]['message']['content'])
 
 

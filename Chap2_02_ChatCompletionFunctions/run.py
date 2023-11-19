@@ -1,7 +1,9 @@
 from dotenv import load_dotenv
 
 load_dotenv()
-import openai
+from openai import OpenAI
+
+client = OpenAI()
 import json
 
 
@@ -36,9 +38,7 @@ def run(user_question):
     # Send the question and available functions to GPT
     messages = [{"role": "user", "content": user_question}]
 
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo-0613", messages=messages, functions=functions
-    )
+    response = client.chat.completions.create(model="gpt-3.5-turbo-0613", messages=messages, functions=functions)
     response_message = response["choices"][0]["message"]
 
     # Append the assistant's response to the messages
@@ -66,10 +66,8 @@ def run(user_question):
             }
         )
         # Get a new response from GPT so it can format the function's response into natural language
-        second_response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo-0613",
-            messages=messages,
-        )
+        second_response = client.chat.completions.create(model="gpt-3.5-turbo-0613",
+        messages=messages)
         return second_response
 
 

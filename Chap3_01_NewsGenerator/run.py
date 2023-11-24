@@ -1,15 +1,15 @@
 from dotenv import load_dotenv
 
 load_dotenv()
-import openai
+from openai import OpenAI
+
+client = OpenAI()
 from typing import List
 
 def ask_chatgpt(messages):
-    response = openai.ChatCompletion.create(
-    model="gpt-3.5-turbo",
-    messages=messages
-    )
-    return (response['choices'][0]['message']['content'])
+    response = client.chat.completions.create(model="gpt-3.5-turbo",
+    messages=messages)
+    return (response.choices[0].message.content)
 
 
 prompt_role='You are an assistant for journalists. \

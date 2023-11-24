@@ -1,21 +1,21 @@
-openai
-python-dotenv
+openai==0.27.8
+python-dotenv==1.0.0
 
 # For Chap3_03_QuestionAnsweringOnPDF
-redis
-pypdf 
-numpy
+redis==4.5.5
+pypdf==3.11.0
+numpy==1.24.3
 
 # For Chap3_04_VoiceAssistant
-gradio
-ffmpeg-python
+gradio==3.35.2
+ffmpeg-python==0.2.0
 #openai-whisper
 
 # For Chapt5_01_LangChain
-langchain
-bs4
-wikipedia
+langchain==0.0.212
+bs4==0.0.1
+wikipedia==1.4.0
 
 # For Chapt5_02_LangChainPDF
-tiktoken
-faiss-cpu
+tiktoken==0.4.0
+faiss-cpu==1.7.4

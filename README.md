@@ -3,6 +3,8 @@ This repository contains different examples and usecases showcased in the book <
 <img src="./images/book_cover.png" alt="Book cover" width="300"/>
 </p>
 
+Check the branches and releases for different versions of the OpenAI API.
+
 # Usage
 
 ### All examples

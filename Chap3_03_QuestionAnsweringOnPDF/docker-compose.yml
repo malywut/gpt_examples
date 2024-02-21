@@ -8,8 +8,9 @@ services:
       - 8001:8001
     environment:
       - REDISEARCH_ARGS=CONCURRENT_WRITE_MODE
+      - REDIS_DATA_DIR=/data
     volumes:
-      - vector-db:/var/lib/redis
+      - vector-db:/data
     healthcheck:
       test: ["CMD", "redis-cli", "-h", "localhost", "-p", "6379", "ping"]
       interval: 2s

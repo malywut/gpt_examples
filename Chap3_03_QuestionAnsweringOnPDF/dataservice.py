@@ -74,19 +74,19 @@ class DataService():
             f"Loaded {self.redis_client.info()['db0']['keys']} documents in Redis search index with name: {INDEX_NAME}")
 
     def pdf_to_embeddings(self, pdf_path: str, chunk_length: int = 1000):
-        # Read data from pdf file and split it into chunks
-        reader = PdfReader(pdf_path)
-        chunks = []
-        for page in reader.pages:
-            text_page = page.extract_text()
-            chunks.extend([text_page[i:i+chunk_length].replace('\n', '')
-                          for i in range(0, len(text_page), chunk_length)])
-
-        # Create embeddings
-        response = openai.Embedding.create(
-            model='text-embedding-ada-002', input=chunks)
-        return [{'id': value['index'], 'vector':value['embedding'], 'text':chunks[value['index']]} for value in response['data']]
-
+    # Read data from pdf file and split it into chunks
+	    reader = PdfReader(pdf_path)
+	    chunks = []
+	    for page in reader.pages:
+	        text_page = page.extract_text()
+	        chunks.extend([text_page[i:i+chunk_length].replace('\n', '')
+	                      for i in range(0, len(text_page), chunk_length)])
+	
+	    # Create embeddings
+	    response = client.embeddings.create(
+	        model='text-embedding-ada-002', input=chunks)
+	    return [{'id': value.index, 'vector':value.embedding, 'text':chunks[value.index]} for value in response.data]
+	    
     def search_redis(self,
                      user_query: str,
                      index_name: str = "embeddings-index",

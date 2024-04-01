@@ -6,7 +6,7 @@ from responseservice import ResponseService
 from dataservice import DataService
 
 # Example pdf
-pdf = '../files/ExplorersGuide.pdf'
+pdf = 'files/ExplorersGuide.pdf'
 
 data_service = DataService()
 
@@ -22,7 +22,7 @@ intent_service = IntentService()
 response_service = ResponseService()
 
 # Question 
-question = 'Who is Roderika?'
+question = 'Where to find treasure chests?'
 # Get the intent
 intents = intent_service.get_intent(question)
 # Get the facts

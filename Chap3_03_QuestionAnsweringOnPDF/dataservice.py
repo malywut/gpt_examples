@@ -1,5 +1,7 @@
 import numpy as np
-import openai
+from openai import OpenAI
+
+client = OpenAI()
 from pypdf import PdfReader
 from redis.commands.search.field import TextField, VectorField
 from redis.commands.search.indexDefinition import IndexDefinition, IndexType
@@ -83,9 +85,8 @@ class DataService():
                           for i in range(0, len(text_page), chunk_length)])
 
         # Create embeddings
-        response = openai.Embedding.create(
-            model='text-embedding-ada-002', input=chunks)
-        return [{'id': value['index'], 'vector':value['embedding'], 'text':chunks[value['index']]} for value in response['data']]
+        response = client.embeddings.create(model='text-embedding-ada-002', input=chunks)
+        return [{'id': value.index, 'vector':value.embedding, 'text':chunks[value.index]} for value in response.data]
 
     def search_redis(self,
                      user_query: str,
@@ -97,9 +98,8 @@ class DataService():
                      print_results: bool = False,
                      ):
         # Creates embedding vector from user query
-        embedded_query = openai.Embedding.create(input=user_query,
-                                                 model="text-embedding-ada-002",
-                                                 )["data"][0]['embedding']
+        embedded_query = client.embeddings.create(input=user_query,
+                                                 model="text-embedding-ada-002").data[0].embedding
         # Prepare the Query
         base_query = f'{hybrid_fields}=>[KNN {k} @{vector_field} $vector AS vector_score]'
         query = (

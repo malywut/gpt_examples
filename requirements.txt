@@ -1,5 +1,8 @@
-openai==1.3.5
+openai==1.14.1
 python-dotenv==1.0.0
+
+# For Chap3_02_YoutubeSummarizerVision
+opencv-python==4.9.0.80
 
 # For Chap3_03_QuestionAnsweringOnPDF
 redis==4.5.5
@@ -7,15 +10,24 @@ pypdf==3.11.0
 numpy==1.24.3
 
 # For Chap3_04_VoiceAssistant
-gradio==3.35.2
+gradio==4.24.0
 ffmpeg-python==0.2.0
 openai-whisper==20231117
+pydantic==2.6.4
+
+# For Chap3_06_SentimentAnalysis
+scikit-learn==1.3.1
 
 # For Chapt5_01_LangChain
-langchain==0.0.212
+langchain==0.1.12 
+langchain_openai==0.1.1
 bs4==0.0.1
 wikipedia==1.4.0
+langchainhub==0.1.15
 
 # For Chapt5_02_LangChainPDF
 tiktoken==0.4.0
 faiss-cpu==1.7.4
+
+# For Chap5 LlamaIndex
+llama-index==0.10.18

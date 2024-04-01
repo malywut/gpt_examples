@@ -1,5 +1,5 @@
 <p align="center">
-This repository contains different examples and usecases showcased in the book <a href="https://appswithgpt.com">Developing Apps with GPT-4 and ChatGPT</a>.
+This repository contains different examples and usecases showcased in the book <a href="https://appswithgpt.com">Developing Apps with GPT-4 and ChatGPT - 2nd Edition</a>.
 <img src="./images/book_cover.png" alt="Book cover" width="300"/>
 </p>
 

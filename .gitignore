@@ -2,3 +2,4 @@
 .venv
 files/*
 */__pycache__/**
+**/*.pkl

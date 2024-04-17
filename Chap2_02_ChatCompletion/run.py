@@ -24,3 +24,5 @@ messages=[
 ])
 
 print(response.choices[0].message.content)
+
+print("hello!!test")

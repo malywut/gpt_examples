@@ -16,3 +16,5 @@ messages=[
 
 # Extract the response
 print(response.choices[0].message.content)
+
+print("hello!")

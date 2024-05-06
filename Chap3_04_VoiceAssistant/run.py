@@ -1,6 +1,9 @@
 import gradio as gr
 import whisper
 from openai import OpenAI
+from dotenv import load_dotenv
+
+load_dotenv()
 
 starting_prompt = """You are an assistant.
 You can discuss with the user, or perform email tasks. Emails require subject, recipient, and body.

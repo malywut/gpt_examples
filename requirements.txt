@@ -31,3 +31,5 @@ faiss-cpu==1.7.4
 
 # For Chap5 LlamaIndex
 llama-index==0.10.18
+weaviate-client==4.5.5
+llama-index-vector-stores-weaviate==0.1.4

@@ -3,33 +3,90 @@ This repository contains different examples and use cases showcased in the book 
 <img src="./images/book_cover.png" alt="Book cover" width="300"/>
 </div>
 
-If you are coming from the first edition, you will find that the code has been updated to use a more recent OpenAI Python library version. You will also find additional code examples that are not in this book's first edition. To switch back to the original code, go to <a href="https://github.com/malywut/gpt_examples/releases/tag/0.27">this tag</a>. The chapters and numbering of the examples are identical across book editions.
+📘 Developing Apps with GPT-4 and ChatGPT — Code Examples
+Welcome! 👋
+This repository contains all the example projects and code snippets featured in the book Developing Apps with GPT-4 and ChatGPT.
 
-# Usage
+Whether you're new to coding or exploring AI development for the first time, this repo is designed to help you learn by doing.
 
-### All examples
-Install the requirements for all the examples with:
+📖 About This Repository
+If you're coming from the first edition of the book:
 
-    pip install -r requirements.txt
+The code in this repo has been updated to use a newer version of the official OpenAI Python library.
 
-Each example contains either a Jupyter notebook, or a Python file that can be run with:
+You’ll also find additional examples not included in the first edition.
 
-    python [example_folder]/run.py
+The chapter numbers and example structure remain the same across book editions for easy navigation.
 
-Some examples require some additional setup.
+To view the original version of the code (first edition), switch to the appropriate tag using Git:
 
-### Chap3_03_QuestionAnseringOnPDF
-Start Redis with
 
-    docker-compose up -d
+git checkout [tag_name]
+🚀 Getting Started
+1. Clone the Repository
+If you haven’t already, clone the repository to your local machine:
 
-### Chap3_04_VoiceAssistant
-The Gradio interface is available at the address displayed in the output.
 
-### Chap5_04_LlamaIndexCustomization
-Customize if needed the docker-compose.yml file and start Weaviate with
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+2. Install the Required Packages
+Make sure you have Python installed. Then, install the dependencies for all examples:
 
-    docker-compose up -d
-Alternatively, run:
 
-    docker run -p 8080:8080 -p 50051:50051 cr.weaviate.io/semitechnologies/weaviate:1.24.9
+pip install -r requirements.txt
+💡 Tip: It’s a good idea to use a virtual environment to manage your Python packages.
+
+🧪 How to Run the Examples
+Each example is stored in its own folder and contains either a Jupyter Notebook (.ipynb) or a Python script (run.py).
+
+To run an example:
+
+python [example_folder]/run.py
+Or open the .ipynb file in a Jupyter environment like VS Code or Google Colab.
+
+⚙️ Examples That Need Extra Setup
+Some examples need a bit more configuration to work. Here's a quick guide:
+
+📄 Chapter 3.03 — Question Answering on PDFs
+This example uses Redis, a fast in-memory database.
+
+To start Redis using Docker:
+
+
+docker-compose up -d
+Make sure Docker is installed and running on your machine. Learn more about Docker here.
+
+🎙️ Chapter 3.04 — Voice Assistant with Gradio
+This example launches a simple voice assistant interface using Gradio.
+
+After running the script, you’ll see a link in your terminal. Open it in your browser to use the assistant.
+
+🧠 Chapter 5.04 — Customizing with LlamaIndex and Weaviate
+This example demonstrates how to customize LlamaIndex with a vector database called Weaviate.
+
+You can start Weaviate locally using Docker:
+
+
+docker-compose up -d
+Or run it directly via Docker without using docker-compose:
+
+
+docker run -p 8080:8080 -p 50051:50051 cr.weaviate.io/semitechnologies/weaviate:1.24.9
+If needed, customize the docker-compose.yml file to suit your setup.
+
+🙋 Need Help?
+If you're stuck, feel free to:
+
+Open an issue
+
+Check the official OpenAI API documentation
+
+Google the error message — it's what all devs do 😄
+
+✅ Contributing
+Beginner contributions are welcome!
+If you improve the documentation or fix an error in the code, feel free to make a pull request.
+
+⭐️ Show Some Love
+If you found this helpful, please give the repo a ⭐️ on GitHub! It helps others discover it — and gives you credit on your profile too.
+

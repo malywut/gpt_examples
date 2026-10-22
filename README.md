@@ -32,4 +32,6 @@ Customize if needed the docker-compose.yml file and start Weaviate with
     docker-compose up -d
 Alternatively, run:
 
-    docker run -p 8080:8080 -p 50051:50051 cr.weaviate.io/semitechnologies/weaviate:1.24.9
+    docker run -p 8080:8080 -p 50051:50051 cr.weaviate.io/semitechnologies/weaviate:1.39.13
+
+If you started an older Weaviate version with docker-compose before, remove its volume first with `docker-compose down -v` (running `run.py` indexes the files again).
